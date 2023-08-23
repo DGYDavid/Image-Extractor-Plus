@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "网页图片提取精灵",
+  "version": "1.0",
+  "description": "一键提取网页里的所有图片并保存到本地",
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ]
+}
